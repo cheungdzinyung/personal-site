@@ -17,7 +17,7 @@ export default function Footer() {
           <li>
             <a
               className="inline-block py-2 transition-colors hover:text-ink"
-              href="https://www.linkedin.com/in/andrewcheungdzinyung"
+              href="https://www.linkedin.com/in/dzinyungandrewcheung/"
             >
               LinkedIn
             </a>
