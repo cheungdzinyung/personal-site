@@ -21,7 +21,16 @@ export const SOURCES: { id: SourceId; label: string }[] = [
   { id: "tldr", label: "TLDR" },
 ];
 
-const REVALIDATE = { next: { revalidate: 900 } };
+// Cloudflare Workers' fetch sends no User-Agent by default, and some
+// APIs (dev.to among them) reject UA-less requests as bot traffic —
+// identify ourselves on every outbound request.
+const REVALIDATE = {
+  next: { revalidate: 900 },
+  headers: {
+    "User-Agent": "andrewcheung.dev news aggregator (hello@andrewcheung.dev)",
+    Accept: "application/json, application/xml, text/xml;q=0.9",
+  },
+} satisfies RequestInit & { next: { revalidate: number } };
 
 type HnHit = {
   objectID: string;

@@ -10,7 +10,7 @@ export default function Home() {
         <DotGrid />
         <div className="relative">
           <p className="mb-6 font-mono text-sm tracking-wider text-accent">
-            {"// senior frontend engineer — react, commerce, scale"}
+            {"// frontend engineer — react, commerce, scale"}
           </p>
           <HeroReveal
             text="Interfaces that are fast, accessible, and provably secure."
