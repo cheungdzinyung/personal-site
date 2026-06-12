@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme tokens — light is default, .dark flips them.
+   Light mode is "indigo on cool porcelain": indigo #4f46e5 carries all
+   interactive/accent colour (5.7:1 on the porcelain bg — WCAG AA).
+   Lime is never used on light backgrounds: 1.5:1, fails WCAG —
+   same lesson as xiudio's brand-orange. */
+:root {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --line: #dcdde6;
+  --line-strong: #c8c9d6;
+  --ink: #1a1b22;
+  --ink-muted: #50515e;
+  --ink-faint: #6f7080;
+  --accent: #4f46e5;
+  --accent-ink: #ffffff;
+}
+
+.dark {
+  --bg: #0b0b10;
+  --surface: #14141b;
+  --line: #26262f;
+  --line-strong: #33333f;
+  --ink: #ededf2;
+  --ink-muted: #a8a8b8;
+  --ink-faint: #7a7a8c;
+  --accent: #c8f560;
+  --accent-ink: #0b0b10;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* WCAG 2.4.12 — focus not obscured: keep focused elements clear of the
+   fixed mobile dock when scrolling via keyboard/skip link */
+html {
+  scroll-padding-bottom: 5rem;
+}
+
+/* WCAG 2.4.11 — focus appearance: ≥2px, ≥3:1 against adjacent colours */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 50;
+  border-radius: 0.375rem;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Belt-and-braces alongside Motion's useReducedMotion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Resume prints light and ink-friendly */
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+}
