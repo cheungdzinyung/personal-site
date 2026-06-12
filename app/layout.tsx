@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import Nav from "@/components/nav";
@@ -16,9 +17,15 @@ export const metadata: Metadata = {
     "Interfaces that are fast, accessible, and provably secure. React, ecommerce, CMS-driven merchandising, Adobe + Google stack.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  // Force dynamic rendering: the nonce-based CSP requires Next to inject
+  // the per-request nonce into its inline scripts, which only happens
+  // during request-time rendering. Statically prerendered HTML has no
+  // nonce, so the CSP would block hydration entirely (the launch bug).
+  await headers();
+
   return (
     <html
       lang="en"

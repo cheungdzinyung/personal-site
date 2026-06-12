@@ -25,7 +25,7 @@ export default function Footer() {
           <li>
             <a
               className="inline-block py-2 transition-colors hover:text-ink"
-              href="mailto:cheungdzinyung@gmail.com"
+              href="mailto:hello@andrewcheung.dev"
             >
               Email
             </a>

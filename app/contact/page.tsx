@@ -16,10 +16,10 @@ export default function Contact() {
       <ul className="mt-10 space-y-4 font-mono text-sm">
         <li>
           <a
-            href="mailto:cheungdzinyung@gmail.com"
+            href="mailto:hello@andrewcheung.dev"
             className="inline-block py-2 text-accent underline-offset-4 hover:underline"
           >
-            cheungdzinyung@gmail.com
+            hello@andrewcheung.dev
           </a>
         </li>
         <li>
