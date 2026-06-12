@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Andrew Cheung — senior frontend engineer. Experience and skills.",
+  description: "Andrew Cheung — frontend engineer. Experience and skills.",
 };
 
 export default function Resume() {
@@ -11,7 +11,7 @@ export default function Resume() {
       <p className="font-mono text-sm tracking-wider text-accent no-print">{"// resume"}</p>
       <h1 className="mt-4 text-4xl font-medium">Andrew Cheung</h1>
       <p className="mt-2 text-ink-muted">
-        Senior Frontend Engineer — React, ecommerce, CMS &amp; martech integration
+        Frontend Engineer — React, ecommerce, CMS &amp; martech integration
       </p>
 
       <section aria-labelledby="experience-heading" className="mt-12">
@@ -20,18 +20,20 @@ export default function Resume() {
         </h2>
         <ol className="mt-6 space-y-8 border-l border-line pl-6">
           <li>
-            <h3 className="font-medium">Senior Frontend Developer — [Current company]</h3>
-            <p className="font-mono text-xs text-ink-faint">[dates] — present</p>
+            <h3 className="font-medium">Frontend Engineer — ecommerce</h3>
+            <p className="font-mono text-xs text-ink-faint">current</p>
             <ul className="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-ink-muted">
-              <li>CMS integration and merchandising component design and implementation for a high-traffic ecommerce platform [TODO: add metrics].</li>
-              <li>Adobe + Google services integration: Analytics, Target, Launch, GAM, AdSense, GA4 [TODO: add outcomes].</li>
+              <li>CMS integration and merchandising component design and implementation for a high-traffic ecommerce platform.</li>
+              <li>Adobe + Google services integration: Analytics, Target, Launch, GAM, AdSense, GA4 — implemented without degrading Core Web Vitals.</li>
             </ul>
           </li>
           <li>
-            <h3 className="font-medium">[Previous role]</h3>
-            <p className="font-mono text-xs text-ink-faint">[dates]</p>
+            <h3 className="font-medium">Full-stack Developer — agency &amp; enterprise (Hong Kong)</h3>
+            <p className="font-mono text-xs text-ink-faint">earlier</p>
             <ul className="mt-3 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-ink-muted">
-              <li>[TODO: previous experience, incl. Node.js + PostgreSQL backend work]</li>
+              <li>Enterprise onboarding platform for CITIC Pacific — React CMS, Express + PostgreSQL API, Nginx deployment.</li>
+              <li>Luxury retail campaign sites (Puyi Optical: Gucci, Gentle Monster, David Beckham Eyewear), bilingual EN/TC.</li>
+              <li>Full-stack web apps for SMEs — ecommerce, payments, real-time event systems (Socket.IO).</li>
             </ul>
           </li>
         </ol>

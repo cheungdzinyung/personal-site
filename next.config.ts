@@ -22,3 +22,7 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// Integrates `next dev` with the Cloudflare adapter (local bindings access)
+import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+initOpenNextCloudflareForDev();

@@ -32,10 +32,10 @@ export default function Contact() {
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/in/dzinyungandrewcheung/"
             className="inline-block py-2 text-accent underline-offset-4 hover:underline"
           >
-            [LinkedIn profile]
+            LinkedIn
           </a>
         </li>
       </ul>

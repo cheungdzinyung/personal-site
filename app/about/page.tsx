@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Andrew Cheung — senior frontend engineer.",
+  description: "About Andrew Cheung — frontend engineer.",
 };
 
 export default function About() {
@@ -12,12 +12,23 @@ export default function About() {
       <h1 className="mt-4 text-4xl font-medium">About</h1>
       <div className="mt-6 space-y-4 leading-relaxed text-ink-muted">
         <p>
-          [TODO: 2–3 paragraphs. Who you are, how you work, what you care about
-          in frontend engineering. Mention the ecommerce/CMS/martech specialty
-          and the performance + accessibility + security obsession this site
-          demonstrates.]
+          I&apos;m Andrew — a frontend developer working on ecommerce at
+          scale. My day job is CMS-driven merchandising: designing and building
+          the component systems that let merchandising teams ship campaigns
+          without engineers in the loop, and integrating the Adobe and Google
+          stacks (Analytics, Target, Launch, GAM, GA4) without sacrificing Web
+          Vitals. Before that I built for agencies and enterprise clients in
+          Hong Kong — onboarding platforms, luxury retail campaign sites, and
+          full-stack products on Node and PostgreSQL.
         </p>
-        <p>[TODO: something human — Ajax, ON; home lab; what you tinker with.]</p>
+        <p>
+          This site is how I work in miniature: performance, accessibility and
+          security treated as features with receipts, not checkboxes. Off the
+          clock I run a small home lab in Ajax, Ontario — a Synology NAS doing
+          more jobs than it was sold for, self-hosted services behind a reverse
+          proxy, and a retro gaming setup with save files that sync better than
+          most production systems I&apos;ve seen.
+        </p>
       </div>
     </div>
   );

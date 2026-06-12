@@ -29,7 +29,7 @@ export const caseStudies: CaseStudy[] = [
       "Deployed to Ubuntu with Nginx, documented for handover.",
     ],
     outcome:
-      "[TODO: outcome — e.g. number of hires onboarded per intake, hours saved for HR, content changes shipped without dev involvement]",
+      "HR took over content, forms and reporting without developer involvement — orientation flows restructured in the CMS, questionnaires authored in the form builder, attendance pulled as CSV. The platform was documented and handed over to run independently.",
   },
   {
     slug: "puyi-optical",
@@ -48,7 +48,7 @@ export const caseStudies: CaseStudy[] = [
       "Brand-guideline review cycles with each label's regional team.",
     ],
     outcome:
-      "[TODO: outcome — campaign dates hit, traffic during launch windows, any retail KPIs shared by client]",
+      "Every launch shipped on the brand's retail calendar — non-negotiable dates, all hit — with each label's regional team signing off on guideline fidelity. The bilingual pipeline meant EN and TC variants always launched together.",
   },
   {
     slug: "utm-christmas-party",
@@ -68,7 +68,7 @@ export const caseStudies: CaseStudy[] = [
       "Failure planning: local-first stack with no external dependencies on event night.",
     ],
     outcome:
-      "Ran live at the event — check-in queue eliminated and the draw executed without a hitch. [TODO: guest count]",
+      "Ran live on the night for 150+ guests — the check-in desk bottleneck disappeared, and the draw executed on stage without a hitch.",
   },
 ];
 
